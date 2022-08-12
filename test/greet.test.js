@@ -1,3 +1,7 @@
+const assert = require('assert');
+
+const Greetings = require('../greetings');
+
 describe("The Greetings factory function", function () {
 
 
@@ -7,12 +11,6 @@ describe("The Greetings factory function", function () {
 
     });
 
-    // it(' it should return an error message when the same name is greeted twice', function () {
-    //     let greetings = Greetings();
-    //     assert.deepEqual("Hello, Pluto", greetings.greet("Pluto", "english"))
-    //     assert.deepEqual("Already greeted enter a new name", greetings.greet("Pluto", "english"))
-
-    // });
 
     it('it should return an error message if language is not selected', function () {
 

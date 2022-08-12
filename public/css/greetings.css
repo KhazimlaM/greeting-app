@@ -6,9 +6,6 @@
 	text-align: center;
 }
 .greetings {
-	/* border: 0em; */
-	/* height: 50px; */
-	/* line-height: 50px; */
 	background-color: white;
 	margin-left: 250px;
 	margin-right: 250px;
@@ -25,8 +22,6 @@
 .errors {
 	height: 50px;
 	background-color: white;
-	/* margin-left: 200px;
-	margin-right: 200px; */
 }
 
 .inputTxt {

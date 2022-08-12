@@ -1,6 +1,6 @@
 // Create a function to set names of users and count them
 
-function Greetings(getItemNames) {
+module.exports = function Greetings(getItemNames) {
 
     var storedNames = getItemNames || {}
     let regex = /^[a-zA-Z]{3,}$/
