@@ -5,6 +5,9 @@ module.exports = function Greetings(getItemNames) {
     var storedNames = getItemNames || {}
     let regex = /^[a-zA-Z]{3,}$/
 
+    let name = "";
+    let language = "";
+
     function setNames(namez) {
         if (storedNames[namez] === undefined) {
             storedNames[namez] = 1;
@@ -17,10 +20,11 @@ module.exports = function Greetings(getItemNames) {
 
 
     // Create a function to greet the name with the selected language and create a regular expression condition
-
+   
+   
     function greet(name, language) {
         let greetMessage = "";
-        let newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase().trim();
+        let newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase().trim(); 
 
         if (newName === "" || !regex.test(newName)) {
             return "Please enter a valid name"
@@ -46,8 +50,8 @@ module.exports = function Greetings(getItemNames) {
 
         return greetMessage;
     }
-
-
+        
+   
     // Get the length of values in the object but first convert it into a list/array
 
     function countNames() {
@@ -63,6 +67,7 @@ module.exports = function Greetings(getItemNames) {
     // handling erros when theres no names, nothing selected and when names contain numeric values
 
     function errorHandling(names, languages) {
+
 
         let invalidChar = "";
 
@@ -92,6 +97,9 @@ module.exports = function Greetings(getItemNames) {
         greet,
         namesReturned,
         errorHandling,
+        name,
+        language,
+       
         
 
     }

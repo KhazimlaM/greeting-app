@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,43 +20,43 @@
 
 <body>
     <div class="section">
-        <div class="greetings">
+               <div class="greetings">
             <h1>Greetings </h1>
             <p class="errors"> </p>
         </div>
+        <form  action="/greet" method="POST">
         <div class="first-section">
-            <h1>Name <textarea name="name" class="greeting inputTxt"></textarea>
-                <div class="counter">0</div>
+            <h1>Name <textarea name="nameEntered" type="text" id="input" class="greeting inputTxt"></textarea>
+                <div class="counter">{{myCounter}}</div>
             </h1>
         </div>
         <div class="span">
             <label class="">
-                <input type="radio" name="language" class="radio-button" value="xhosa">
+                <input type="radio" name="myButton" class="radio-button" value="xhosa">
                 <span class="label-body">Xhosa</span>
             </label>
             <label class="">
-                <input type="radio" name="language" class="radio-button" value="english">
+                <input type="radio" name="myButton" class="radio-button" value="english">
                 <span class="label-body">English</span>
             </label>
             <label class="">
-                <input type="radio" name="language" class="radio-button" value="venda">
+                <input type="radio" name="myButton" class="radio-button" value="venda">
                 <span class="label-body">Venda</span>
             </label>
         </div>
         <br>
         <div class="button">
 
-            <button class="last-button" on type="button" name="button">Greet Me</button>
-            <button class="first-button" on type="button" name="button">Reset</button>
-
-
+            <button class="last-button" on type="submit" name="button">Greet Me</button>
+            <button class="first-button" on type="submit" name="button">Reset</button>
 
 
         </div>
         <br>
-        <div class="display"></div>
+      
+    </form>
+      <div class="display">{{theName}}</div>
     </div>
-
 </body>
 
 </html>
