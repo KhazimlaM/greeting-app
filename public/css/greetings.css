@@ -19,10 +19,10 @@
 	margin-left: 200px;
 	margin-right: 200px;
 }
-/* .errors {
+.errors {
 	height: 50px;
-	background-color: rgb(255, 255, 255);
-} */
+	/* background-color: rgb(255, 255, 255); */
+}
 
 .inputTxt {
 	/* border: 40px; */

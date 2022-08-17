@@ -1,7 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const session  = require('express-session');
-const flash = require('connect-flash');
+const flash = require('express-flash');
 const bodyParser = require('body-parser');
 const Greetings= require('./greetings');
 
@@ -9,7 +9,7 @@ const app = express();
 const greetings = Greetings();
 
 
-app.engine('handlebars', exphbs.engine({ defaultLayout: '' }));
+app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
@@ -34,6 +34,8 @@ app.get("/", function(req, res){
 
   if(myName !==''){
     var theName = greetings.greet(myName,myLanguage)
+    greetings.name = ""
+    greetings.language = ""
   }
   res.render('index',{
     theName
@@ -52,9 +54,10 @@ app.get("/", function(req, res){
       req.flash('info', greetings.errorHandling(name, language));
 
     } else {
-      greetings.name = name
-      greetings.language = language
+     greetings.name = name
+     greetings.language = language
     }
+
 
     res.redirect('/');
    
@@ -69,3 +72,4 @@ app.listen(PORT, function () {
 });
 
 
+   
