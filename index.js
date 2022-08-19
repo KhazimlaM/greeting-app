@@ -1,9 +1,10 @@
 const express = require('express');
-const exphbs = require('express-handlebars');
+// const exphbs = require('express-handlebars');
 const session  = require('express-session');
 const flash = require('express-flash');
 const bodyParser = require('body-parser');
 const Greetings= require('./greetings');
+const exphbs = require('handlebars')
 
 const app = express();
 const greetings = Greetings();
