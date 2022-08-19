@@ -8,6 +8,14 @@ const Greetings= require('./greetings');
 const app = express();
 const greetings = Greetings();
 
+const config = {
+  connectionString
+}
+if (process.env.NODE_ENV == "production") {
+  config.ssl = {
+      rejectUnauthorized: false
+  }
+}
 
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
