@@ -44,8 +44,8 @@ app.get("/", function(req, res){
     counter
   })
 
-  app.get('/resert', function (req,res){
-    greetings.resert()
+  app.get('/reset', function (req,res){
+    greetings.reset()
 
     res.redirect('/')
   })

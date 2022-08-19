@@ -87,10 +87,18 @@ module.exports = function Greetings(getItemNames) {
             invalidChar = "Please select a language";
         }
 
+
         
+
         return invalidChar;
 
     }
+
+    function reset() {
+        storedNames = {}
+    }
+
+
 
 
 
@@ -103,7 +111,7 @@ return {
     errorHandling,
     name,
     language,
- 
+    reset,
 
 }
 
