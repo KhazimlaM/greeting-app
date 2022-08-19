@@ -1,37 +1,42 @@
-<div class="greetings">
-    <h1>Greetings </h1>
-    <p class="errors">{{messages.info}}</p>
-</div>
-<form action="/greet" method="POST">
-    <div class="first-section">
-        <h1>Name <textarea name="nameEntered" type="text" id="input" class="greeting inputTxt"></textarea>
-            <div class="counter">0</div>
-        </h1>
+<body>
+    <div class="greetings">
+        <h1>Greetings </h1>
+        <p class="errors" style="color: red;">{{messages.info}}</p>
     </div>
-    <div class="span">
-        <label class="">
-            <input type="radio" name="myButton" class="radio-button" value="xhosa">
-            <span class="label-body">Xhosa</span>
-        </label>
-        <label class="">
-            <input type="radio" name="myButton" class="radio-button" value="english">
-            <span class="label-body">English</span>
-        </label>
-        <label class="">
-            <input type="radio" name="myButton" class="radio-button" value="venda">
-            <span class="label-body">Venda</span>
-        </label>
+    <form action="/greet" method="POST">
+        <div class="first-section">
+            <h1>Name <input name="nameEntered" type="text" id="input" class="greeting inputTxt"></input>
+                <div>{{counter}}</div>
+            </h1>
+        </div>
+        <div class="span">
+            <label class="">
+                <input type="radio" name="myButton" class="radio-button" value="xhosa">
+                <span class="label-body">Xhosa</span>
+            </label>
+            <label class="">
+                <input type="radio" name="myButton" class="radio-button" value="english">
+                <span class="label-body">English</span>
+            </label>
+            <label class="">
+                <input type="radio" name="myButton" class="radio-button" value="venda">
+                <span class="label-body">Venda</span>
+            </label>
+        </div>
+        <br>
+        <div class="button">
+
+            <button class="first-button" on type="submit" name="button">Greet Me</button>
+           <a href="/resert" > <button class="first-button" on type="submit" name="button">Reset</button></a>
+           <button class="greeted-button" on type="submit" name="button"> <a href="/actions"> Greeted Names</a></button>
+           
+
+
+        </div>
+        <br>
+
+    </form>
+        <div class="display">{{theName}}</div>
+    <script src="timeout.js"></script>
     </div>
-    <br>
-    <div class="button">
-
-        <button class="last-button" on type="submit" name="button">Greet Me</button>
-        <button class="first-button" on type="submit" name="button">Reset</button>
-
-
-    </div>
-    <br>
-
-</form>
-<div class="display">{{theName}}</div>
-</div>
+</body>

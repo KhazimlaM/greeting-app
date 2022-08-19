@@ -37,8 +37,17 @@ app.get("/", function(req, res){
     greetings.name = ""
     greetings.language = ""
   }
+
+  let counter = greetings.countNames()
   res.render('index',{
-    theName
+    theName,
+    counter
+  })
+
+  app.get('/resert', function (req,res){
+    greetings.resert()
+
+    res.redirect('/')
   })
 
 });
@@ -61,10 +70,32 @@ app.get("/", function(req, res){
 
     res.redirect('/');
    
+  });
+
+  app.get('/actions', function (req, res) {
+
+      let names = greetings.namesReturned() 
+
+      res.render('actions',{
+       names
+
+      })
+  
+  });
+
+  app.get('/counter/:name', function (req,res){
+    let Names = req.params.name
+    let Times = greetings. countNames(Names) 
+
+    res.render('names', {
+      Names,
+      Times
+
+    });
 
   });
 
- 
+
 
 const PORT = process.env.PORT || 3030;
 app.listen(PORT, function () {

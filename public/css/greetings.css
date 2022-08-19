@@ -20,13 +20,25 @@
 	margin-right: 200px;
 }
 .errors {
-	height: 50px;
+	height: 25px;
 	/* background-color: rgb(255, 255, 255); */
 }
 
 .inputTxt {
-	/* border: 40px; */
+	/* border: 60px; */
+	
 }
+
+.greeted-names {
+background-color: yellow;
+border-radius: 20px ;
+  
+}
+
+a {
+	text-decoration: none;
+	color: black;
+  }
 
 
 
