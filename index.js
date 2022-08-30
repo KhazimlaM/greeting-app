@@ -13,16 +13,16 @@ const greetings = Greetings();
 
 const DATABASE_URL = process.env.DATABASE_URL || "postgresql://codex:pg123@localhost:5432/greet";
 
-// const config = { 
-// 	connectionString : DATABASE_URL
-// }
+const config = { 
+	connectionString : DATABASE_URL
+}
 
 if (process.env.NODE_ENV == 'production') {
   config.ssl = {
     rejectUnauthorized: false
   }
 }
-const db = pgp(DATABASE_URL);
+const db = pgp(config);
 console.log(db);
 let logic = greetDBLogic(db)
 
