@@ -22,6 +22,7 @@ if (process.env.NODE_ENV == 'production') {
     rejectUnauthorized: false
   }
 }
+
 const db = pgp(config);
 console.log(db);
 let logic = greetDBLogic(db)
