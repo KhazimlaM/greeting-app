@@ -13,7 +13,7 @@ const greetings = Greetings();
 
 const DATABASE_URL = process.env.DATABASE_URL || "postgresql://codex:pg123@localhost:5432/greet";
 
-const config = { 
+const config = {
 	connectionString : DATABASE_URL
 }
 
