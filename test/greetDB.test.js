@@ -77,7 +77,7 @@ describe(" The Greetings database factory function", async function () {
     });
    
    
-    it(" should show (0) if the are no names in the dataabse table", async function () {
+    it(" it should show (0) if the are no names in the dataabse table", async function () {
         assert.equal(0, await myGreet.getCounter())
     });
    
