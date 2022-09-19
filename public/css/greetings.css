@@ -9,8 +9,9 @@
 	background-color: rgb(246, 205, 20);
 	margin-left: 250px;
 	margin-right: 250px;
+	margin-bottom: 20px;
 	align-items: center;
-	padding: 5px 15px 5px 15px;
+	padding: 5px 15px ;
 	
 }
 .display {
@@ -20,9 +21,33 @@
 	margin-right: 200px;
 }
 .errors {
-	height: 25px;
+	height: 15px;
 	/* background-color: rgb(255, 255, 255); */
 }
+.nav-bar {
+	background-color: white
+}
+.topnav a.nav-bar{
+background-color: white;
+color: red;
+}
+.topnav a{
+	color: red;
+	float: left;
+	padding: 10px 14px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav {
+background-color: white;
+/* padding: 5px 15px; */
+overflow: hidden;
+
+}
+
+
+
 
 .inputTxt {
 	/* border: 60px; */
@@ -43,6 +68,7 @@ a {
   .btns {
    background-color: yellow;
   }
+  
  
 
 

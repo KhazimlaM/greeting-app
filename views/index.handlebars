@@ -1,8 +1,19 @@
 <body>
+    <div>
+        <div class="topnav">
+            <a class="nav-bar" href="/">Home</a>
+            <a href="/actions">Greeted</a>
+        </div>
+
+    </div>
+    <br>
+    <br>
+
     <div class="greetings">
         <h1>Greetings </h1>
         <p class="errors" style="color: red;">{{messages.info}}</p>
     </div>
+
     <form action="/greet" method="POST">
         <div class="first-section">
             <h1>Name <input name="nameEntered" type="text" id="input" class="greeting inputTxt"></input>
@@ -26,15 +37,15 @@
         <br>
         <div class="button">
 
-            <button class="btns" on type="submit" name="button">Greet Me</button> 
-           <button class="btns" on type="submit" name="button"> <a href="/actions"> Greeted Names</a></button>
-           <button class="btns" on type="submit" name="button"><a href="/reset"> Reset</a></button>
+            <button class="btns" on type="submit" name="button">Greet Me</button>
+            <button class="btns" on type="submit" name="button"> <a href="/actions"> Greeted Names</a></button>
+            <button class="btns" on type="submit" name="button"><a href="/reset"> Reset</a></button>
         </div>
         <br>
 
     </form>
 
-        <div class="display">{{theName}}</div>
+    <div class="display">{{theName}}</div>
     <script src="timeout.js"></script>
     </div>
 </body>
