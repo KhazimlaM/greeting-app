@@ -70,7 +70,7 @@ module.exports = function myRoutes(greetings, db) {
     return {
         home,
         returnedNames,
-        countedNames,
+        countedNames,  
         resetButton,
         errorMessage
     }

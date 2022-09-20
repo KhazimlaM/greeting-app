@@ -25,10 +25,10 @@
 	/* background-color: rgb(255, 255, 255); */
 }
 .nav-bar {
-	background-color: white
+	background-color: rgb(49, 107, 10)
 }
 .topnav a.nav-bar{
-background-color: white;
+background-color: rgb(109, 149, 14);
 color: red;
 }
 .topnav a{
@@ -40,7 +40,7 @@ color: red;
 }
 
 .topnav {
-background-color: white;
+background-color: rgb(60, 144, 11);
 padding: 5px 15px;
 overflow: hidden;
 
