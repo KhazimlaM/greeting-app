@@ -1,10 +1,10 @@
 module.exports = function myGreetings(db) {
 
-    async function storedNames(name) {
+    async function storedNames(name, language) {
 
+        if(!name || !language) return
         var checkUser = await db.oneOrNone('select greeted_names from my_greetigs where greeted_names = $1', [name])
         console.log(checkUser)
-
         if (checkUser === null) {
             await db.none('insert into my_greetigs(greeted_names,counter) values($1, $2)', [name, 1])
 
@@ -18,6 +18,7 @@ module.exports = function myGreetings(db) {
 
     async function getCounter() {
         let list = await db.manyOrNone('select * from my_greetigs');
+        console.log(list)
         return list.length
     }
 

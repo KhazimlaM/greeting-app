@@ -24,13 +24,13 @@ module.exports = function myRoutes(greetings, db) {
 
         let name = req.body.nameEntered
         let language = req.body.myButton
-        await db.storedNames(name);
         if (!name || !language) {
             req.flash('info', greetings.errorHandling(name, language));
-
+            
         } else {
             greetings.name = name
             greetings.language = language
+            await db.storedNames(name,language);
         }
 
 
@@ -40,18 +40,18 @@ module.exports = function myRoutes(greetings, db) {
 
     async function returnedNames(req, res) {
 
-        let names = greetings.namesReturned()
+        let names = await db.getNames()
 
-        res.render('actions',
+        res.render('actions',{
             names
-
+        }
         )
     };
 
     async function countedNames(req, res) {
         let Names = req.params.name
-        let Times = greetings.countNames(Names)
-
+        let Times = await db.getUserCounter(Names)
+        console.log(Times)
         res.render('names', {
             Names,
             Times
