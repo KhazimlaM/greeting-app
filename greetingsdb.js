@@ -1,11 +1,15 @@
 module.exports = function myGreetings(db) {
 
     async function storedNames(name, language) {
+       
+        let nameRegex = /^[a-zA-Z]{3,}$/
+        let check = nameRegex.test(name)
+        console.log(check);
 
         if(!name || !language) return
         var checkUser = await db.oneOrNone('select greeted_names from my_greetigs where greeted_names = $1', [name])
         console.log(checkUser)
-        if (checkUser === null) {
+        if (checkUser === null && check === true) {
             await db.none('insert into my_greetigs(greeted_names,counter) values($1, $2)', [name, 1])
 
         }

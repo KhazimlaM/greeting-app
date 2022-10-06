@@ -3,7 +3,7 @@
 module.exports = function Greetings(getItemNames) {
 
     var storedNames = {}
-    let regex = /^[a-zA-Z]{3,}$/
+    var regex = /^[a-zA-Z]{3,}$/
 
     let name = "";
     let language = "";

@@ -62,7 +62,7 @@ module.exports = function myRoutes(greetings, db) {
     async function resetButton(req, res) {
 
         await db.clear()
-
+        req.flash('info', "Your data has been cleared")
         res.redirect('/')
     }
 
