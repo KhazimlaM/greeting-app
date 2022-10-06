@@ -56,6 +56,13 @@ a {
   .btns {
    background-color: yellow;
   }
+
+ .instruction {
+ 
+	height: 20px;
+	background-color: rgb(216, 233, 36);
+}
+ 
   
  
 

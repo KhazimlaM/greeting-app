@@ -23,7 +23,7 @@ module.exports = function myGreetings(db) {
     }
 
     async function getNames() {
-        let getNames = await db.manyOrNone('select greeted_names from my_greetigs')
+        let getNames = await db.manyOrNone('select * from my_greetigs')
         return getNames
     }
 
