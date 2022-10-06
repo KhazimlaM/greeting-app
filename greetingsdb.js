@@ -4,7 +4,7 @@ module.exports = function myGreetings(db) {
        
         let nameRegex = /^[a-zA-Z]{3,}$/
         let check = nameRegex.test(name)
-        console.log(check);
+       
 
         if(!name || !language) return
         var checkUser = await db.oneOrNone('select greeted_names from my_greetigs where greeted_names = $1', [name])
