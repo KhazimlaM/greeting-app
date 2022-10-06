@@ -14,5 +14,4 @@ greeted_names text NOT NULL,
 counter int NOT NULL 
 );
 
-ALTER TABLE my_tests
-ALTER COLUMN greeted_names data_type NOT NULL;
+
