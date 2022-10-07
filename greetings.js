@@ -10,9 +10,6 @@ module.exports = function Greetings(getItemNames) {
 
   
 
-    // Create a function to greet the name with the selected language and create a regular expression condition
-
-
     function greet(name, language) {
         let greetMessage = "";
         let newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase().trim();
