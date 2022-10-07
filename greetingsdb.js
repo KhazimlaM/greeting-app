@@ -39,7 +39,6 @@ module.exports = function myGreetings(db) {
     async function clear() {
         await db.none('delete from my_greetigs')
 
-  
     }
 
 

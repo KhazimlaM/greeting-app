@@ -8,17 +8,7 @@ module.exports = function Greetings(getItemNames) {
     let name = "";
     let language = "";
 
-    function setNames(name) {
-
-        if (storedNames[name] === undefined) {
-            storedNames[name] = 1;
-        }
-        else {
-            storedNames[name]++;
-        }
-
-    }
-
+  
 
     // Create a function to greet the name with the selected language and create a regular expression condition
 
@@ -34,7 +24,6 @@ module.exports = function Greetings(getItemNames) {
 
         else {
 
-            setNames(name);
 
             if (language !== null) {
                 if (language === "xhosa") {
@@ -53,23 +42,7 @@ module.exports = function Greetings(getItemNames) {
     }
 
 
-    // Get the length of values in the object but first convert it into a list/array
-
-    function countNames(name) {
-        let counter = Object.keys(storedNames);
-        return counter.length;
-    }
-
-    // Create a function that returns the stored names
-    function namesReturned() {
-
-        console.log(storedNames)
-
-        return storedNames
-    }
-
-    // handling erros when theres no names, nothing selected and when names contain numeric values
-
+   
     function errorHandling(names, languages) {
 
 
@@ -88,32 +61,21 @@ module.exports = function Greetings(getItemNames) {
         }
 
 
-        
+
 
         return invalidChar;
 
     }
 
-    function reset() {
-        storedNames = {}
+  
+    return {
+
+        greet,
+        errorHandling,
+        name,
+        language,
+
     }
-
-
-
-
-
-return {
-    
-    setNames,
-    countNames,
-    greet,
-    namesReturned,
-    errorHandling,
-    name,
-    language,
-    reset,
-
-}
 
 }
 
