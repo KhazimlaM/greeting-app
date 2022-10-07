@@ -34,12 +34,7 @@ describe("The Greetings factory function", function () {
     });
 
 
-    it('should count all the stored names', function () {
-
-        let greetings = Greetings();
-        greetings.setNames("Liza")
-        assert.deepEqual({ Liza: 1 }, greetings.namesReturned())
-    });
+  
 
     it('it should greet the name passed in', function () {
 
